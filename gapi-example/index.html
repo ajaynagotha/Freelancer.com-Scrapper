@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scrapper Tool</title>
+    <meta charset="utf-8" />
+    <!-- <script src="gapi.js"></script> -->
+    <script src="main.js"></script>
+    <script src="background.js"></script>
+  </head>
+  <style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 260px;
+    height: auto;
+    padding: 20px 0;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5%;
+    margin-bottom: 10px !important;
+    width: 90% !important;
+  }
+  </style>
+  <body>
+    <p style="font-size:22px;text-align:center">Freelancer Scrapper</p>
+    <button id="runit">Run Script</button>
+    <a id="result" style="display:none" target="_blank"  href="https://docs.google.com/spreadsheets/d/1OkPqIN5lDv0-kLcWss1kiTStsNK1f5bYtuavC320fbE/edit#gid=522077165";><button>Click here to see result</button></a>
+  </body>
+  <script src="https://apis.google.com/js/client.js?onload=onGAPILoad"></script>
+</html>

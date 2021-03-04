@@ -1,0 +1,40 @@
+{
+  "name": "Freelancer.com Scrapper",
+  "version": "1.0",
+  "description": "Extension to scrap data from freelancer.com",
+  "author": "Ajay N",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Freelancer Scrapper",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_security_policy": "script-src 'self' https://apis.google.com/; object-src 'self'",
+  "oauth2": {
+    "client_id": "190566737687-21lkugte8kegtcc3qv321g8cqebsrqjd.apps.googleusercontent.com",
+    "scopes":["https://www.googleapis.com/auth/spreadsheets"]
+  },
+  "permissions": [
+    "identity", 
+    "activeTab",
+    "https://www.freelancer.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.freelancer.com/hello"
+      ],
+      "js": [
+        "inject.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+  
+}
+
+
+
